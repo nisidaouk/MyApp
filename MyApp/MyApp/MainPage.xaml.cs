@@ -12,6 +12,13 @@ namespace MyApp
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+
+            buttonNavi.Clicked += async (sender, args) =>
+            {
+                await Navigation.PushAsync(new SubPage());
+            };
+        }
+
+
 	}
 }

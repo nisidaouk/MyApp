@@ -4,11 +4,20 @@
              xmlns:local="clr-namespace:MyApp"
              x:Class="MyApp.MainPage">
 
-    <StackLayout>
+    <StackLayout Padding="20">
         <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    	<Button Text="Navigate!"
+                HorizontalOptions="Center"
+                x:Name="buttonNavi"
+                AutomationId="MainPage.buttonNavi"/>
+
+        <Label Text="{Binding Source={x:Reference entry}, Path=Text, StringFormat='entry: {0}'}" 
+               HorizontalOptions="Center"
+               AutomationId="MainPage.label"/>
+            
+
+        <Entry x:Name="entry"
+               AutomationId="MainPage.entry"/>
     </StackLayout>
 
 </ContentPage>
